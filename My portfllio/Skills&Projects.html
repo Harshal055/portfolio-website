@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Kaisei+Opti&family=Playfair+Display:wght@400;500;700&family=Poppins:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(23, 2, 71);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+
+
+        }
+        nav ul li a:hover{
+            color: rgb(241, 7, 54);
+            font-size: 1.02rem;
+
+
+
+        }
+
+        .timeline {
+            position: relative;
+
+            max-width: 1200px;
+            margin: auto;
+
+
+        }
+        .timeline::after{
+            content: '';
+            position: absolute;
+            width: 7px;
+            height: 100%;
+            background: #fff;
+            top: 0;
+            left: 57%;
+            margin-left:-3.7px;
+            z-index: -1;
+            animation: moveline 6s linear forwards;
+
+        }
+        @keyframes moveline{
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        
+        } 
+            
+
+        .container {
+            color: black;
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+
+             
+        }
+        @keyframes movedown{
+            0%{
+                transform: translateY(-30px);
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    
+        .container:nth-child(1) 
+        {
+            animation-delay: 0s;
+        }
+        .container:nth-child(2) 
+        {
+            animation-delay: 1s;
+        }
+        .container:nth-child(3) 
+        {
+            animation-delay: 2s;
+        }
+        .container:nth-child(4) 
+        {
+            animation-delay: 3s;
+        }
+        .container:nth-child(5) 
+        {
+            animation-delay: 4s;
+        }
+        .container:nth-child(6) 
+        {
+            animation-delay: 5s;
+        }
+        .container:nth-child(7) 
+        {
+            animation-delay: 6s;
+        }
+ @media screen and (max-width: 600px) {
+    .timeline{
+        margin: 50% auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+
+    .container{
+        width: 100%;
+        padding-left: 85;
+        padding-right: 25px;
+    }
+    
+ }
+
+
+
+        .text-box {
+            padding: 20px 30px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        
+
+        .container img {
+            position: absolute;
+            width: 40px;
+            border-radius: 50%;
+            right: -20px;
+            top: 32px;
+            z-index: 13;
+        }
+        .right-container img{
+            left: -20px;
+
+        }
+       
+        
+        .left-container {
+            left: 0%;
+
+        }
+
+        .right-container {
+
+            left: 57.3%;
+
+        }
+
+
+        .text-box{
+            font-weight: 600;
+        }
+        .left-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 25px;
+            z-index: 1;
+
+            border-top: 15px solid transparent;
+            border-bottom:15px solid transparent;
+            border-left: 15px solid rgb(255, 255, 255);
+            right: -15px;
+
+        }
+        .right-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 25px;
+            z-index: 1;
+
+            border-top: 15px solid transparent;
+            border-bottom:15px solid transparent;
+            border-right: 15px solid rgb(255, 255, 255);
+            left: -15px;
+
+        }
+
+        
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"> Harshal portfolio</div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="About.html"> About</a></li>
+                <li><a href="Skills&Projects.html">language & Tools</a></li>
+                <li><a href=""> Projects</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="icon/adopremierepro.gif" alt="">
+            <div class="text-box">
+                <h2> premir pro</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="container right-container">
+            <img src="icon/html.png" alt="">
+            <div class="text-box">
+                <h2> html</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="icon/css.png" alt="">
+            <div class="text-box">
+                <h2> css</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="container right-container">
+            <img src="icon/javascript.gif" alt="">
+            <div class="text-box">
+                <h2> Javascript</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="icon/figma.gif" alt="">
+            <div class="text-box">
+                <h2> figma</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="container right-container">
+            <img src="icon/kotlin.png" alt="">
+            <div class="text-box">
+                <h2> kotlin</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="icon/androidstudio.png" alt="">
+            <div class="text-box">
+                <h2> Android studio</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora consectetur repellendus,
+                    corporis cum, laboriosam asperiores eius inventore quas harum vitae voluptatem numquam architecto
+                    optio quasi! Esse doloribus consequuntur facere?
+                </p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>
